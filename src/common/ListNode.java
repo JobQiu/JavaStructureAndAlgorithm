@@ -5,7 +5,7 @@ package common;
  */
 public class ListNode {
     int val;
-    ListNode next;
+    public ListNode next;
 
     public int getVal() {
         return val;
@@ -15,20 +15,26 @@ public class ListNode {
         this.val = val;
     }
 
-    public ListNode getNext() {
-        return next;
-    }
-
-    public void setNext(ListNode next) {
-        this.next = next;
-    }
 
     public ListNode(int x){
         val=x;
     }
-    public ListNode insertFirst(ListNode l){
-        l.setNext(this);
-        return l;
 
+    public ListNode insertFirst(ListNode l){
+        l.next=this;
+        return l;
+    }
+    public ListNode insertFirst(int l){
+        ListNode ll = new ListNode(l);
+//        System.out.println("inside the list node class"+ll.getVal());
+        ll.next=(this);
+        return ll;
+    }
+    public void display(){
+        ListNode current = this;
+        while(current!=null){
+            System.out.print(current.getVal()+" ");
+            current=current.next;
+        }
     }
 }
