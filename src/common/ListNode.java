@@ -4,7 +4,7 @@ package common;
  * Created by JobQ on 9/26/2016.
  */
 public class ListNode {
-    int val;
+    public int val;
     public ListNode next;
 
     public int getVal() {

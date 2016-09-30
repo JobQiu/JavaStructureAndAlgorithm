@@ -1,5 +1,7 @@
 package other;
 
+import java.util.Date;
+
 /**
  * Created by JobQ on 9/30/2016.
  */
@@ -19,6 +21,9 @@ public class TestThread implements Runnable {
     }
 
     public static void main(String[] args) {
+        Date d = new Date();
+        System.out.println("date's class is :"+d.getClass());
+        System.out.println("date's class's name is :"+d.getClass().getName());
         TestThread ds1 = new TestThread("阿三");
         TestThread ds2 = new TestThread("李四");
 
