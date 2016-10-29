@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaStructureAndAlgorithm.iml" filepath="$PROJECT_DIR$/JavaStructureAndAlgorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../learnMaven/demo.iml" filepath="$PROJECT_DIR$/../learnMaven/demo.iml" />
     </modules>
   </component>
 </project>
