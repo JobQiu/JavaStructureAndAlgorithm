@@ -1,5 +1,6 @@
 package LeetCode;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,5 +36,26 @@ public class Problem621 {
         return Math.max((n + 1) * (max - 1) + maxCount, tasks.length);
     }
 
+    public int leastInterval2(char[] tasks, int n) {
+        int[] count = new int[26];
+        for (char c : tasks) {
+            count[c - 'A']++;
+        }
+        Arrays.sort(count);
+        int j = 24;
+        int maxCount = 1;
+        while (count[j] == count[25]) {
+            maxCount++;
+            j--;
+        }
+        return Math.max((n + 1) * (count[25] - 1) + maxCount, tasks.length);
+    }
+
+    /**
+     * 2 situations,
+     *
+     * 1. no idle at all
+     * if we can use other
+     */
 
 }
